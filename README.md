@@ -1,2 +1,2 @@
-# odin-TicTacToe
-Simple TicTacToe from The Odin Project curriculum
+# odin-RockPaperScissors
+Simple RockPaperScissors from The Odin Project curriculum
