@@ -11,19 +11,24 @@
 
 <script>
 
+function playRound(playerSelection, computerSelection) {
+  
+}
+
 const humanPlay = humanSelection (); // Exctracts selection from prompt function
 const computerSelection = computerPlay(); // Sets the result of computerSelection as the result of Computer
 
-function humanSelection () {
+function humanSelection () { // Function for user to input their play
     let humanPlay = prompt ("Choose: Rock, Paper or Scissors", "Write your selection"); //Prompt that asks user to write selection.
     valueToUseHuman = humanPlay.toUpperCase(); // Convert to uppercase
     alert(valueToUseHuman);
 }
 
-function computerPlay() {
-    let Computervalues = ["Rock","Paper","Scissors"],
+function computerPlay() { 
+    let Computervalues = ["ROCK","PAPER","SCISSORS"],
         valueToUse = Computervalues[Math.floor(Math.random() * Computervalues.length)];
 }
+
 
 
 </script>
