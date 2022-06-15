@@ -11,24 +11,45 @@
 
 <script>
 
-function playRound(playerSelection, computerSelection) {
-  
-}
+let playerScore = 0;
+let computerScore = 0;
 
-const humanPlay = humanSelection (); // Exctracts selection from prompt function
-const computerSelection = computerPlay(); // Sets the result of computerSelection as the result of Computer
-
-function humanSelection () { // Function for user to input their play
-    let humanPlay = prompt ("Choose: Rock, Paper or Scissors", "Write your selection"); //Prompt that asks user to write selection.
-    valueToUseHuman = humanPlay.toUpperCase(); // Convert to uppercase
-    alert(valueToUseHuman);
-}
 
 function computerPlay() { 
-    let Computervalues = ["ROCK","PAPER","SCISSORS"],
-        valueToUse = Computervalues[Math.floor(Math.random() * Computervalues.length)];
+    let choice = ['ROCK', 'PAPER', 'SCISSORS'];
+    let randomPlay = Math.floor(Math.random() * choice.length);
+    return choice[randomPlay]
 }
 
+function playerPlay() { 
+ const ask = prompt("Rock, Paper, or Scissors?").toUpperCase();
+ return ask; }
+
+ const playerSelection = playerPlay();
+
+function playRound() { // Play one round
+    let playerChoice = playerSelection;
+    let computerSelection = computerPlay(); // Runs computerPlay and sets it as
+
+    console.log(`You selected: "${playerChoice}"`);
+    console.log(`Computer selected: "${computerSelection}"`);
+  
+    if (playerChoice === computerSelection) {
+    return ("It's a tie!")
+  } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
+    alert ("The computer chose paper and it means you lose!")
+  } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
+    alert ("The computer chose Scissors and it means you WIN!")
+  } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
+    alert ("The computer chose Scissors and it means you lose!")
+  } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
+    alert ("The computer chose rock and it means you WIN!")
+  } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
+    alert ("The computer chose rock and it means you lose!")
+  } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
+    alert ("The computer chose paper and it means you WIN!")
+  }
+}
 
 
 </script>
