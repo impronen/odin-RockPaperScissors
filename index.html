@@ -11,12 +11,18 @@
 
 <script>
 
-let humanPlay = prompt ("Choose: Rock, Paper or Scissors", "Write your selection"); //Prompt that asks user to write selection.
+const humanPlay = humanSelection (); // Exctracts selection from prompt function
+const computerSelection = computerPlay(); // Sets the result of computerSelection as the result of Computer
+
+function humanSelection () {
+    let humanPlay = prompt ("Choose: Rock, Paper or Scissors", "Write your selection"); //Prompt that asks user to write selection.
+    valueToUseHuman = humanPlay.toUpperCase(); // Convert to uppercase
+    alert(valueToUseHuman);
+}
 
 function computerPlay() {
     let Computervalues = ["Rock","Paper","Scissors"],
         valueToUse = Computervalues[Math.floor(Math.random() * Computervalues.length)];
-    alert(valueToUse); //Alerts the computer value (placeholder since doesn't need to do that in real action)
 }
 
 
