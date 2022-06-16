@@ -75,31 +75,6 @@ function playerPlay() {
 
 function game() {
 
-
-
-    let result = oneRound(playerChoice, computerSelection);
-    if (result === "player") {
-        playerScore++;
-        alert ("You won")
-
-    console.log(`You selected: "${playerChoice}"`);
-    console.log(`Computer selected: "${computerSelection}"`);
-    }
-    else if (result === "It's a tie!") {
-            console.log("So you both chose the same, it's a tie.")
-            alert ("It's a tie")
-
-    console.log(`You selected: "${playerChoice}"`);
-    console.log(`Computer selected: "${computerSelection}"`);
-
-        }
-    else if (result === "computer") {
-            computerScore++;
-            alert ("Computer won")
-
-    console.log(`You selected: "${playerChoice}"`);
-    console.log(`Computer selected: "${computerSelection}"`);
-    }
 }
 
 /*Game in pseudocode
