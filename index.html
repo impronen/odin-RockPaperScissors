@@ -11,8 +11,7 @@
 
 <script>
 
-let playerScore = 0;
-let computerScore = 0;
+
 
 
 function computerPlay() {  // Function for the computer to choose it's play randomly
@@ -27,29 +26,89 @@ function playerPlay() { // Promt for the user to input their play + turn it to u
 
  const playerSelection = playerPlay();
 
-function playRound() { // Play one round
+function playRound() {                  // Play one round
     let playerChoice = playerSelection;
     let computerSelection = computerPlay(); // Runs computerPlay and sets it as
 
     console.log(`You selected: "${playerChoice}"`);
     console.log(`Computer selected: "${computerSelection}"`);
   
+    //Nested if statements to see which one wins + add 1 to score for the winner
+
     if (playerChoice === computerSelection) {
     return ("It's a tie!")
   } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
     alert ("The computer chose paper and it means you lose!")
+    computerScore++;
+    return "computer";
   } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
     alert ("The computer chose Scissors and it means you WIN!")
+    playerScore++;
+    return "player";
   } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
     alert ("The computer chose Scissors and it means you lose!")
+    computerScore++;
+    return "computer";
   } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
     alert ("The computer chose rock and it means you WIN!")
+    playerScore++;
+    return "player";
   } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
     alert ("The computer chose rock and it means you lose!")
+    computerScore++;
+    return "computer";
   } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
     alert ("The computer chose paper and it means you WIN!")
+    playerScore++;
+    return "player";
   }
 }
+
+function game() {
+
+let playerScore = 0;
+let computerScore = 0;
+
+    let result = oneRound(playerChoice, computerSelection);
+    if (result === "player") {
+        playerScore++;
+        alert ("You won")
+
+    console.log(`You selected: "${playerChoice}"`);
+    console.log(`Computer selected: "${computerSelection}"`);
+    }
+    else if (result === "It's a tie!") {
+            console.log("So you both chose the same, it's a tie.")
+            alert ("It's a tie")
+
+    console.log(`You selected: "${playerChoice}"`);
+    console.log(`Computer selected: "${computerSelection}"`);
+
+        }
+    else if (result === "computer") {
+            computerScore++;
+            alert ("Computer won")
+
+    console.log(`You selected: "${playerChoice}"`);
+    console.log(`Computer selected: "${computerSelection}"`);
+    }
+}
+
+/*Game in pseudocode
+Set variables for playerScore and computerScore, both with default value of 0.
+Create variable for game end result that triggers playRound() function and extracts from it .
+
+*/
+
+/* Score tracking in pseudocode
+Get a value in playRound() depending on which player wins. 
+If value is playerWins, then add 1 to playerScore.
+If value is computerWins, then add 1 to computerScore.
+Restart game.
+IF playerScore value is 5, print "you win"
+IF computerScore value is 5, print "The computer wins. You are a loser."
+*/
+
 
 
 </script>
