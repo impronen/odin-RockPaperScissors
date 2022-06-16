@@ -11,7 +11,8 @@
 
 <script>
 
-
+let playerScore = 0;
+let computerScore = 0;
 
 
 function computerPlay() {  // Function for the computer to choose it's play randomly
@@ -66,8 +67,7 @@ function playRound() {                  // Play one round
 
 function game() {
 
-let playerScore = 0;
-let computerScore = 0;
+
 
     let result = oneRound(playerChoice, computerSelection);
     if (result === "player") {
