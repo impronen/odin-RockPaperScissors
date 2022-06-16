@@ -26,12 +26,15 @@ function playerPlay() {
  const ask = prompt("Rock, Paper, or Scissors?").toUpperCase();
  return ask; }
 
- const playerSelection = playerPlay();
+ 
 
 
 // Play one round
 
- function playRound() {                  
+ function playRound() {        
+  
+    let playerSelection = playerPlay();
+  
     let playerChoice = playerSelection;
     let computerSelection = computerPlay(); // Runs computerPlay and sets it as
 
