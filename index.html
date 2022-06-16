@@ -9,8 +9,9 @@
 
 <body>
 
-<script>
 
+<script>
+// Set initial score when loading the program
 let playerScore = 0;
 let computerScore = 0;
 
@@ -44,53 +45,56 @@ function playerPlay() {
 //Nested if statements to see which one wins + add 1 to score for the winner
 
     if (playerChoice === computerSelection) {
-    return ("Its a tie! Player score is "+ playerScore +". Computer score is "+computerScore+".")
+    alert ("Its a tie! Player score is "+ playerScore +". Computer score is "+computerScore+".")
 
   } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
     computerScore++;
-    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
     playerScore++;
-    return ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
     computerScore++;
-    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
     playerScore++;
-    return "Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".";
+    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
     computerScore++;
-    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
     playerScore++;
-    return ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   }
 }
 
 function game() {
+  playRound(); // Triggers a single round of gameplay
+console.log("Player score "+ playerScore +"");
+console.log("Computer score "+computerScore+"");
+if (playerScore || computerScore === 5) {
+  alert ("Placeholder for code that alerts which one wins")}
+else {
+  game();
+}
 
 }
+
+
+
+
 
 /*Game in pseudocode
 Alert - this is a five round game, get ready
 Run playRound().
 After succesfull run check score for both players, IF below 5 alert "ready for next round?" and after OK, replay playRound().
 IF score for either is 5, alert with winner and OK resets score.
-*/
-
-/* Score tracking in pseudocode
-Get a value in playRound() depending on which player wins. 
-If value is playerWins, then add 1 to playerScore.
-If value is computerWins, then add 1 to computerScore.
-Restart game.
-IF playerScore value is 5, print "you win"
-IF computerScore value is 5, print "The computer wins. You are a loser."
 */
 
 
