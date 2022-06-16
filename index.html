@@ -14,14 +14,15 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
-function computerPlay() {  // Function for the computer to choose it's play randomly
+// Function for the computer to choose it's play randomly
+function computerPlay() {  
     let choice = ['ROCK', 'PAPER', 'SCISSORS'];
     let randomPlay = Math.floor(Math.random() * choice.length);
     return choice[randomPlay]
 }
 
-function playerPlay() { // Promt for the user to input their play + turn it to uppercase
+// Promt for the user to input their play + turn it to uppercase
+function playerPlay() { 
  const ask = prompt("Rock, Paper, or Scissors?").toUpperCase();
  return ask; }
 
