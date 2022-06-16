@@ -44,34 +44,33 @@ function playerPlay() {
 //Nested if statements to see which one wins + add 1 to score for the winner
 
     if (playerChoice === computerSelection) {
-    return ("It's a tie!")
+    return ("Its a tie! Player score is "+ playerScore +". Computer score is "+computerScore+".")
+
   } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
-    alert ("The computer chose paper and it means you lose!")
     computerScore++;
-    return "computer";
+    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+
   } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
-    alert ("The computer chose Scissors and it means you WIN!")
     playerScore++;
-    return "player";
+    return ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+
   } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
-    alert ("The computer chose Scissors and it means you lose!")
     computerScore++;
-    return "computer";
+    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+
   } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
-    alert ("The computer chose rock and it means you WIN!")
     playerScore++;
-    return "player";
+    return "Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".";
+
   } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
-    alert ("The computer chose rock and it means you lose!")
     computerScore++;
-    return "computer";
+    return ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+
   } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
-    alert ("The computer chose paper and it means you WIN!")
     playerScore++;
-    return "player";
+    return ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+
   }
-  console.log(`Your score: "${playerScore}"`);
-  console.log(`Computer score: "${computerScore}"`);
 }
 
 function game() {
