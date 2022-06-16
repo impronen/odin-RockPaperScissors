@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tic Tac Toe</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
@@ -27,14 +27,17 @@ function playerPlay() { // Promt for the user to input their play + turn it to u
 
  const playerSelection = playerPlay();
 
-function playRound() {                  // Play one round
+
+// Play one round
+
+ function playRound() {                  
     let playerChoice = playerSelection;
     let computerSelection = computerPlay(); // Runs computerPlay and sets it as
 
     console.log(`You selected: "${playerChoice}"`);
     console.log(`Computer selected: "${computerSelection}"`);
   
-    //Nested if statements to see which one wins + add 1 to score for the winner
+//Nested if statements to see which one wins + add 1 to score for the winner
 
     if (playerChoice === computerSelection) {
     return ("It's a tie!")
@@ -63,6 +66,8 @@ function playRound() {                  // Play one round
     playerScore++;
     return "player";
   }
+  console.log(`Your score: "${playerScore}"`);
+  console.log(`Computer score: "${computerScore}"`);
 }
 
 function game() {
