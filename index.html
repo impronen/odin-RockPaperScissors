@@ -49,39 +49,43 @@ function playerPlay() {
 
   } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
     computerScore++;
-    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
     playerScore++;
-    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
     computerScore++;
-    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
     playerScore++;
-    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
     computerScore++;
-    alert ("Computer wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
     playerScore++;
-    alert ("Player wins. Player score is "+ playerScore +". Computer score is "+computerScore+".");
+    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
 
   }
 }
 
-function game() {
+//This function runs the game until one player has 5 points.
+
+function game() { 
   playRound(); // Triggers a single round of gameplay
 console.log("Player score "+ playerScore +"");
 console.log("Computer score "+computerScore+"");
-if (playerScore || computerScore === 5) {
-  alert ("Placeholder for code that alerts which one wins")}
+if (playerScore === 5) {alert ("You win!")}
+
+else if (computerScore === 5)  {alert ("The computer won!")
+}
 else {
-  game();
+  game(); //Loops to start if neither player has had score up to five.
 }
 
 }
@@ -97,7 +101,7 @@ After succesfull run check score for both players, IF below 5 alert "ready for n
 IF score for either is 5, alert with winner and OK resets score.
 */
 
-
+// Codepen: https://codepen.io/impronen/pen/ExQMgrJ
 
 </script>
 
