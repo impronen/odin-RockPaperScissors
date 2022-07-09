@@ -119,6 +119,10 @@ function resetScore () {
   document.getElementById("roundWinner").innerHTML = "";
 }
 
+// Event listener for victory condition, start from here: 
+// https://stackoverflow.com/questions/26946235/pure-javascript-listen-to-input-value-change
+
+
 //This function runs the game until one player has 5 points.
 
 function game() { 
