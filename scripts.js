@@ -1,14 +1,10 @@
-/*
-
-The UI - three buttons that listen to start game function. Score counter.
-Event listener for wictory, which notifyies about win somehow.
-Score counter for both players and reset, for reseting both.
-
-*/
-
-// Set initial score when loading the program
 let playerScore = 0;
+
 let computerScore = 0;
+let roundWinner = "";
+
+document.getElementById("playerScore").innerHTML = playerScore;
+document.getElementById("computerScore").innerHTML = computerScore;
 
 // Function for the computer to choose it's play randomly
 function computerPlay() {  
@@ -17,76 +13,110 @@ function computerPlay() {
     return choice[randomPlay]
 }
 
-// Promt for the user to input their play + turn it to uppercase
-function playerPlay() { 
- const ask = prompt("Rock, Paper, or Scissors?").toUpperCase();
- return ask; }
 
-//Functions for player buttons
-
+//Player chooses rock
 function playerRock()  {
   let playerChoice = "ROCK";
   console.log(`You selected: "${playerChoice}"`);
   let computerSelection = computerPlay();
   console.log(`Computer selected: "${computerSelection}"`);
+  
+  if (playerChoice === computerSelection) {
+    let winner = "TIE";
+     roundWinner = winner; 
+  }
+  else if (computerSelection === "SCISSORS") {
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+  else if (computerSelection === "PAPER") {
+    computerScore++;
+    let winner = "A I";
+    roundWinner = winner; 
+  }
+  document.getElementById("playerScore").innerHTML = playerScore;
+  document.getElementById("computerScore").innerHTML = computerScore;
+
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
+
+  document.getElementById("roundWinner").innerHTML = roundWinner;
 }
 
+//Player chooses paper
 function playerPaper()  {
   let playerChoice = "PAPER";
   console.log(`You selected: "${playerChoice}"`);
   let computerSelection = computerPlay();
   console.log(`Computer selected: "${computerSelection}"`);
+
+  if (playerChoice === computerSelection) {
+    let winner = "TIE";
+    roundWinner = winner; 
+  }
+  else if (computerSelection === "ROCK") {
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+  else if (computerSelection === "SCISSORS") {
+    computerScore++;
+    let winner = "A I";
+    roundWinner = winner; 
+  }
+  document.getElementById("playerScore").innerHTML = playerScore;
+  document.getElementById("computerScore").innerHTML = computerScore;
+
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
+
+  document.getElementById("roundWinner").innerHTML = roundWinner;
 }
 
+//Player chooses scissors
 function playerScissors()  {
   let playerChoice = "SCISSORS";
   console.log(`You selected: "${playerChoice}"`);
   let computerSelection = computerPlay();
   console.log(`Computer selected: "${computerSelection}"`);
+
+  if (playerChoice === computerSelection) {
+    let winner = "TIE";
+    roundWinner = winner; 
+  }
+  else if (computerSelection === "PAPER") { 
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+  else if (computerSelection === "ROCK") {
+    computerScore++;
+    let winner = "A I";
+    roundWinner = winner; 
+  }
+  document.getElementById("playerScore").innerHTML = playerScore;
+  document.getElementById("computerScore").innerHTML = computerScore;
+
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
+
+  document.getElementById("roundWinner").innerHTML = roundWinner;
 }
 
-// Play one round
+//Reset score
 
- function playRound() {        
-  /*
-    let playerSelection = playerPlay();
-  
-    let playerChoice = playerSelection;
-    let computerSelection = computerPlay(); // Runs computerPlay and sets it as
+function resetScore () {
+  let playerScore = 0;
+  let computerScore = 0;
 
-    console.log(`You selected: "${playerChoice}"`);
-    console.log(`Computer selected: "${computerSelection}"`);
-  */
-//Nested if statements to see which one wins + add 1 to score for the winner
+  document.getElementById("playerScore").innerHTML = playerScore;
+  document.getElementById("computerScore").innerHTML = computerScore;
 
-    if (playerChoice === computerSelection) {
-    alert ("Its a tie! Player score is "+ playerScore +". Computer score is "+computerScore+".")
+  document.getElementById("playerChoice").innerHTML = 0;
+  document.getElementById("computerSelection").innerHTML = 0;
 
-  } else if (playerChoice === "ROCK" && computerSelection === "PAPER") {
-    computerScore++;
-    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  } else if (playerChoice === "ROCK" && computerSelection === "SCISSORS") {
-    playerScore++;
-    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  } else if (playerChoice === "PAPER" && computerSelection === "SCISSORS") {
-    computerScore++;
-    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  } else if (playerChoice === "PAPER" && computerSelection === "ROCK") {
-    playerScore++;
-    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  } else if (playerChoice === "SCISSORS" && computerSelection === "ROCK") {
-    computerScore++;
-    alert ("Computer wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  } else if (playerChoice === "SCISSORS" && computerSelection === "PAPER") {
-    playerScore++;
-    alert ("Player wins this round. Player score is "+ playerScore +". Computer score is "+computerScore+".");
-
-  }
+  document.getElementById("roundWinner").innerHTML = "";
 }
 
 //This function runs the game until one player has 5 points.

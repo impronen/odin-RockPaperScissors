@@ -1,14 +1,17 @@
+* { border: 2px solid #ff6262; padding: 15px; margin: 15px; }
+
 body {
     font-family: "Courier New", Courier, monospace;
     display: flex;
     flex-direction: column;
-    background-image: 
+   /* background-image: 
     url(pattern-1.jpg);
-    background-size: 100% auto;
+    background-size: 100% auto; */
     color: white;
+    background-color: darkblue;
 }
 
-.header, .player, .scorecard {
+.header, .player, .reset, .round-winner, .scorecard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -17,7 +20,22 @@ body {
 
 .player {
     padding: 8px;
-    margin: 20px;
+    margin: 50px;
+}
+
+.reset {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.score-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .gameButton {
@@ -29,4 +47,6 @@ body {
     background-color: transparent;
     border-color: whitesmoke;
     color: white;
+    font-weight: bold;
+    font-size: large;
 }
