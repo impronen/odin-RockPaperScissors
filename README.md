@@ -2,7 +2,7 @@
 
 Part of The Odin Project curriculum. 
 
-For this project I created a sipmle Rock Paper Scissors game with a simple user interface.
+For this project I created a simple Rock Paper Scissors game with a simple user interface.
 
 Things learned:
 
