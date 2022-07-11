@@ -13,33 +13,33 @@
 <div class="header">
   <h1>rock / paper / scissors</h1>
   <p>first to get 5 points wins</p>
+
 </div>
 
 <div class="player">
-  <h2>C H O O S E</h2>
+  <h2>c h o o s e</h2>
   <button class="gameButton" onclick="playerRock()">r o c k</button>
   <button class="gameButton" onclick="playerPaper()">p a p e r</button>
   <button class="gameButton" onclick="playerScissors()">s c i s s o r s</button>
   
 </div>
 
-<div class="round-winner">
-  <p>this round was won by <span id="roundWinner"></span></p>
+<div class="scores">
+  <div>
+  <div>your play was<span id="playerChoice"></span> </div>
+  <div>player score: <span id="playerScore"></span></div>
 </div>
-
-<div class="reset">
-  <div>your play was <span id="playerChoice"></span> </div>
-  <div>AI play was <span id="computerSelection"></span></div>
+<p>this round was won by: <span id="roundWinner"></span></p>
+<div>
+  <div>ai play was<span id="computerSelection"></span></div>
+  <div>ai score: <span id="computerScore"></span></div>
+</div>
 </div>
 
 
 
 <div class="scorecard">
-  <div class="score-row">
-    
-  <div>player score: <span id="playerScore"></span></div>
-  <div>A I score: <span id="computerScore"></span></div>
-  </div>
+  <div class="winner"><span id="gameWinner"></span></div>
   <button class="gameButton" onclick="resetScore()">r e s e t&nbsp;&nbsp; &nbsp;&nbsp;g a m e</button>
 </div>
 
@@ -48,6 +48,8 @@
 
 
 <script src="scripts.js"></script>
-
+<div class="footer">
+  Copyright © The Odin Project - <script> document.write(new Date().getFullYear()) </script> Antero Tienaho
+</div>
 </body>
 </html>

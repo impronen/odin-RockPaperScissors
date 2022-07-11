@@ -1,46 +1,47 @@
-* { border: 2px solid #ff6262; padding: 15px; margin: 15px; }
+* {padding: 5px; margin: 5px; }
 
 body {
     font-family: "Courier New", Courier, monospace;
     display: flex;
     flex-direction: column;
-   /* background-image: 
-    url(pattern-1.jpg);
-    background-size: 100% auto; */
+    background-image: 
+    url(pattern-1.png);
     color: white;
     background-color: darkblue;
 }
 
-.header, .player, .reset, .round-winner, .scorecard {
+.header, .player, .scores, .round-winner, .scorecard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
+.winner {
+    font-size: larger;
+}
+
 .player {
-    padding: 8px;
-    margin: 50px;
+    padding-top: 3em;
+    padding: 5px;
+    margin: 20px;
 }
 
-.reset {
+.scores {
+    padding-top: 3em;
     flex-direction: row;
     justify-content: space-around;
-}
-
-
-
-.score-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    font-size: larger;
     align-items: center;
+}
 
+.scorecard {
+    padding-top: 3em;
 }
 
 .gameButton {
     margin: 20px;
-    width: max-content;
+    width: 20%;
     padding: 7px 15px;
     border-radius: 4px;
     font-weight: bold;
@@ -49,4 +50,24 @@ body {
     color: white;
     font-weight: bold;
     font-size: large;
+    transition: all 0.2s ease;
+}
+
+.gameButton:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 0 8px 1px;
+  }
+
+.footer {
+    color: beige;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
 }
