@@ -52,6 +52,11 @@ function game() {
     let winner = "you";
     roundWinner = winner; 
   }
+  else if ((computerSelection === "scissors" && playerChoice === "paper")) {
+    computerScore++;
+    let winner = "a i";
+    roundWinner = winner; 
+  }
   else if (computerSelection === "rock" && playerChoice === "scissors"){
     computerScore++;
     let winner = "a i";
@@ -70,11 +75,6 @@ function game() {
   else if ((computerSelection === "paper" && playerChoice === "scissors")) {
     playerScore++;
     let winner = "you";
-    roundWinner = winner; 
-  }
-  else if ((computerSelection === "scissors" && playerChoice === "paper")) {
-    computerScore++;
-    let winner = "a i";
     roundWinner = winner; 
   }
 }
