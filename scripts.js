@@ -22,6 +22,7 @@ function computerPlay() {
     return choice[randomPlay]
 }
 
+//Checks the victory condition
 function winCondition() {
   if (playerScore === 5) {
     let WIN = "after 5 rounds you are the winner!";
@@ -40,42 +41,50 @@ function updateScores () {
   document.getElementById("gameWinner").innerHTML = gameWinner;
 }
 
-function game(playerChoice, computerSelection) {
-
-
+//Function that contains the game itself - triggered inside playerselection functions
+function game() {
   if (playerChoice === computerSelection) {
     let winner = "nobody";
      roundWinner = winner; 
   }
-  else if (computerSelection === "scissors" && playerChoice === "rock") { // 
+  else if (computerSelection === "scissors" && playerChoice === "rock") { 
     playerScore++;
     let winner = "you";
     roundWinner = winner; 
   }
-
+  else if (computerSelection === "rock" && playerChoice === "scissors"){
+    computerScore++;
+    let winner = "a i";
+    roundWinner = winner; 
+  }
+  else if ((computerSelection === "rock" && playerChoice === "paper")) {
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+  else if ((computerSelection === "paper" && playerChoice === "rock")) {
+    computerScore++;
+    let winner = "a i";
+    roundWinner = winner; 
+  }
+  else if ((computerSelection === "paper" && playerChoice === "scissors")) {
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+  else if ((computerSelection === "scissors" && playerChoice === "paper")) {
+    computerScore++;
+    let winner = "a i";
+    roundWinner = winner; 
+  }
 }
 
 
 //Player chooses rock
 function playerRock()  {
-  let playerChoice = "rock";
-  let computerSelection = computerPlay();
-  
-  if (playerChoice === computerSelection) {
-    let winner = "nobody";
-     roundWinner = winner; 
-  }
-  else if (computerSelection === "scissors") {
-    playerScore++;
-    let winner = "you";
-    roundWinner = winner; 
-  }
-  else if (computerSelection === "paper") {
-    computerScore++;
-    let winner = "a i";
-    roundWinner = winner; 
-  }
-
+  playerChoice = "rock";
+  computerSelection = computerPlay();
+  game(playerChoice, computerSelection)
   winCondition();
   updateScores ();
 
@@ -85,23 +94,8 @@ function playerRock()  {
 
 //Player chooses paper
 function playerPaper()  {
-  let playerChoice = "paper";
-  let computerSelection = computerPlay();
-
-  if (playerChoice === computerSelection) {
-    let winner = "nobody";
-    roundWinner = winner; 
-  }
-  else if (computerSelection === "rock") {
-    playerScore++;
-    let winner = "you";
-    roundWinner = winner; 
-  }
-  else if (computerSelection === "scissors") {
-    computerScore++;
-    let winner = "a i";
-    roundWinner = winner; 
-  }
+  playerChoice = "paper";
+  game(playerChoice, computerSelection)
    winCondition();
    updateScores ()
 
@@ -111,27 +105,10 @@ function playerPaper()  {
 
 //Player chooses scissors
 function playerScissors()  {
-  let playerChoice = "scissors";
-  let computerSelection = computerPlay();
-
-
-  if (playerChoice === computerSelection) {
-    let winner = "nobody";
-    roundWinner = winner; 
-  }
-  else if (computerSelection === "paper") { 
-    playerScore++;
-    let winner = "you";
-    roundWinner = winner; 
-  }
-  else if (computerSelection === "rock") {
-    computerScore++;
-    let winner = "a i";
-    roundWinner = winner; 
-    
-  }
-   winCondition();
-   updateScores ()
+  playerChoice = "scissors";
+  game(playerChoice, computerSelection)
+  winCondition();
+  updateScores ()
 
    document.getElementById("playerChoice").innerHTML = playerChoice;
    document.getElementById("computerSelection").innerHTML = computerSelection;
