@@ -85,12 +85,13 @@ function playerRock()  {
   playerChoice = "rock";
   computerSelection = "";
   computerSelection = computerPlay();
+  
   game(playerChoice, computerSelection)
   winCondition();
   updateScores ();
 
-   document.getElementById("playerChoice").innerHTML = playerChoice;
-   document.getElementById("computerSelection").innerHTML = computerSelection;
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
 }
 
 //Player chooses paper
@@ -98,12 +99,13 @@ function playerPaper()  {
   playerChoice = "paper";
   computerSelection = "";
   computerSelection = computerPlay();
+  
   game(playerChoice, computerSelection)
-   winCondition();
-   updateScores ()
+  winCondition();
+  updateScores ()
 
-   document.getElementById("playerChoice").innerHTML = playerChoice;
-   document.getElementById("computerSelection").innerHTML = computerSelection;
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
 }
 
 //Player chooses scissors
@@ -111,12 +113,13 @@ function playerScissors()  {
   playerChoice = "scissors";
   computerSelection = "";
   computerSelection = computerPlay();
+  
   game(playerChoice, computerSelection)
   winCondition();
   updateScores ()
 
-   document.getElementById("playerChoice").innerHTML = playerChoice;
-   document.getElementById("computerSelection").innerHTML = computerSelection;
+  document.getElementById("playerChoice").innerHTML = playerChoice;
+  document.getElementById("computerSelection").innerHTML = computerSelection;
 }
 
 //Reset score
