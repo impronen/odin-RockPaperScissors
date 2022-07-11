@@ -13,3 +13,5 @@ Things learned:
 - Using pen & paper (or Excalidraw) to make mockup UI + flowcharts for algorithms
 - Use and usefulness of git branches
 
+Live site: https://impronen.github.io/odin-RockPaperScissors/
+
