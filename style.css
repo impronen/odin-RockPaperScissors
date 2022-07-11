@@ -1,13 +1,12 @@
-* {padding: 5px; margin: 5px; }
+* { padding: 5px; margin: 5px; }
 
 body {
     font-family: "Courier New", Courier, monospace;
     display: flex;
     flex-direction: column;
-    background-image: 
-    url(pattern-1.png);
-    color: white;
-    background-color: darkblue;
+    color: whitesmoke;
+    background: rgb(71,71,71);
+    background: linear-gradient(180deg, rgba(71,71,71,1) 0%, rgba(117,117,117,1) 35%, rgba(71,71,71,1) 100%);
 }
 
 .header, .player, .scores, .round-winner, .scorecard {
@@ -39,16 +38,21 @@ body {
     padding-top: 3em;
 }
 
+.roundWinner {
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+
+}
+
 .gameButton {
     margin: 20px;
     width: 20%;
     padding: 7px 15px;
     border-radius: 4px;
-    font-weight: bold;
     background-color: transparent;
     border-color: whitesmoke;
     color: white;
-    font-weight: bold;
     font-size: large;
     transition: all 0.2s ease;
 }

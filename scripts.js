@@ -4,6 +4,7 @@ let computerScore = 0;
 let roundWinner = "";
 let gameWinner = "";
 let playerChoice = "";
+let playerSelection = "";
 let computerSelection = "";
 
 
@@ -38,6 +39,22 @@ function updateScores () {
   document.getElementById("roundWinner").innerHTML = roundWinner;
   document.getElementById("gameWinner").innerHTML = gameWinner;
 }
+
+function game(playerChoice, computerSelection) {
+
+
+  if (playerChoice === computerSelection) {
+    let winner = "nobody";
+     roundWinner = winner; 
+  }
+  else if (computerSelection === "scissors" && playerChoice === "rock") { // 
+    playerScore++;
+    let winner = "you";
+    roundWinner = winner; 
+  }
+
+}
+
 
 //Player chooses rock
 function playerRock()  {
