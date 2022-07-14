@@ -83,7 +83,6 @@ function game() {
 //Player chooses rock
 function playerRock()  {
   playerChoice = "rock";
-  computerSelection = "";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
@@ -97,7 +96,6 @@ function playerRock()  {
 //Player chooses paper
 function playerPaper()  {
   playerChoice = "paper";
-  computerSelection = "";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
@@ -111,7 +109,6 @@ function playerPaper()  {
 //Player chooses scissors
 function playerScissors()  {
   playerChoice = "scissors";
-  computerSelection = "";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
