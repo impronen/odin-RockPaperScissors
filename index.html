@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title> R / P / S </title>
-</head>
+  </head>
 
 <body>
 
 <div class="header">
   <h1>rock / paper / scissors</h1>
   <p>first to get 5 points wins</p>
-
 </div>
 
 <div class="player">
@@ -21,16 +20,15 @@
   <button class="gameButton" onclick="playerRock()">r o c k</button>
   <button class="gameButton" onclick="playerPaper()">p a p e r</button>
   <button class="gameButton" onclick="playerScissors()">s c i s s o r s</button>
-  
 </div>
 
 <div class="scores">
-  <div>
+<div>
   <div>you chose<span id="playerChoice"></span> </div>
   <div>player score: <span id="playerScore"></span></div>
 </div>
 <div class="center-winner">
-<div>this round was won by:<span id="roundWinner"></span></div>
+  <div>this round was won by:<span id="roundWinner"></span></div>
 </div>
 <div>
   <div>ai picked<span id="computerSelection"></span></div>
@@ -45,13 +43,10 @@
   <button class="gameButton" onclick="resetScore()">r e s e t&nbsp;&nbsp; &nbsp;&nbsp;g a m e</button>
 </div>
 
-<!-- <button onclick="game()">Play</button> -->
- 
-
-
-<script src="scripts.js"></script>
 <div class="footer">
   Copyright © The Odin Project - <script> document.write(new Date().getFullYear()) </script> Antero Tienaho
 </div>
+
+<script src="scripts.js defer"></script>
 </body>
 </html>
