@@ -82,11 +82,16 @@ function game() {
 
 //Player chooses rock
 function playerRock()  {
+
+  if (playerScore === 5 || computerScore === 5) {
+  }
+  else {
   playerChoice = "rock";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
   winCondition();
+  }
   updateScores ();
 
   document.getElementById("playerChoice").innerHTML = playerChoice;
@@ -95,11 +100,15 @@ function playerRock()  {
 
 //Player chooses paper
 function playerPaper()  {
+  if (playerScore === 5 || computerScore === 5) {
+  }
+  else {
   playerChoice = "paper";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
   winCondition();
+  }
   updateScores ()
 
   document.getElementById("playerChoice").innerHTML = playerChoice;
@@ -108,11 +117,15 @@ function playerPaper()  {
 
 //Player chooses scissors
 function playerScissors()  {
+  if (playerScore === 5 || computerScore === 5) {
+  }
+  else {
   playerChoice = "scissors";
   computerSelection = computerPlay();
   
   game(playerChoice, computerSelection)
   winCondition();
+  }
   updateScores ()
 
   document.getElementById("playerChoice").innerHTML = playerChoice;
